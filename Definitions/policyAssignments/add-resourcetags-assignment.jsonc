@@ -1,0 +1,23 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+    "nodeName": "/root",
+    "assignment": {
+        "name": "addresourcetags",
+        "displayName": "Add a tag to resources",
+        "description": "Adds the specified tag and value when any resource missing this tag is created or updated. Existing resources can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed. Does not modify tags on resource groups."
+    },
+    "definitionEntry": {
+        "policyId": "/providers/Microsoft.Authorization/policyDefinitions/4f9dc7db-30c1-420c-b61a-e1d640128d26",
+        "displayName": "Add a tag to resources"
+    },
+    "parameters": {
+        "tagName": "sampleTagName",
+        "tagValue": "sampleTagValue"
+    },
+    "enforcementMode": "DoNotEnforce",
+    "scope": {
+        "epac-dev": [
+            "/subscriptions/b2c5ab64-1473-483f-a839-ef88914ac0b8"
+        ]
+    }
+}
